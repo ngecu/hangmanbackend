@@ -6,11 +6,11 @@ import asyncHandler from 'express-async-handler'
 // @access  Public
 const createGame = asyncHandler(async (req, res) => {
   try {
-    const { userId, score } = req.body;
+    const { user, score } = req.body;
 
     // Create a new game instance
     const game = new Game({
-      user: userId,
+      user: user,
       score,
     });
 
